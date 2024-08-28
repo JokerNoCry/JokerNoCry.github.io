@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>todo-list</title>
+      <link href="/posts/980b2da8.html"/>
+      <url>/posts/980b2da8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="2024-08-28">2024-08-28</h2><h3 id="Linux源码">Linux源码</h3><p><a href="https://gitee.com/shen-lifeng/linux-0.11-note#https://gitee.com/link?target=https%3A%2F%2Fpan.baidu.com%2Fs%2F1E0E7wv2MUkhjpbja2nhtzw">https://gitee.com/shen-lifeng/linux-0.11-note#https://gitee.com/link?target=https%3A%2F%2Fpan.baidu.com%2Fs%2F1E0E7wv2MUkhjpbja2nhtzw</a></p><p><a href="https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/old-versions/">https://mirrors.edge.kernel.org/pub/linux/kernel/Historic/old-versions/</a></p><p><a href="https://elixir.bootlin.com/linux/0.01/source/boot">https://elixir.bootlin.com/linux/0.01/source/boot</a></p><p><a href="https://git.kernel.org/?s=idle">https://git.kernel.org/?s=idle</a></p><p><a href="https://blog.csdn.net/wzt_007/article/details/84945062">https://blog.csdn.net/wzt_007/article/details/84945062</a></p><h3 id="工作">工作</h3><ul><li>snmp配多个团体字问题</li><li>合单Bug 144149 - 【内部测试】【2024移动集采】【ADXLB07分支】【ADX3000-PE-HG3】【SNMP】snmp主机配置snmpv3类型的主机为32位精确IP时客户端可以访问，配置24位网段时网段内的IP也无法访问设备snm</li><li>安管问题处理</li><li>管理员api密码加密</li><li>日志支持ssl加密</li><li></li></ul><h3 id="blog">blog</h3><ul><li><p>想把blog放到github上，静态页面之类的放在JokerNoCry.github.io里</p></li><li><p>md源文件放在一个私有目录里，防止丢失</p></li><li><p>解决blog中的图片问题</p></li></ul><h3 id="other">other</h3>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux-0.11源码分析（1）linux目录文件详解</title>
+      <link href="/posts/a41842.html"/>
+      <url>/posts/a41842.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="目录树">目录树</h2><p>./linux-0.11/<br>├── boot<br>│   ├── bootsect<br>│   ├── bootsect.o<br>│   ├── bootsect.s<br>│   ├── head.o<br>│   ├── head.s<br>│   ├── setup<br>│   ├── setup.o<br>│   └── setup.s<br>├── fs<br>│   ├── bitmap.c<br>│   ├── bitmap.o<br>│   ├── block_dev.c<br>│   ├── block_dev.o<br>│   ├── buffer.c<br>│   ├── buffer.o<br>│   ├── char_dev.c<br>│   ├── char_dev.o<br>│   ├── exec.c<br>│   ├── exec.o<br>│   ├── fcntl.c<br>│   ├── fcntl.o<br>│   ├── file_dev.c<br>│   ├── file_dev.o<br>│   ├── file_table.c<br>│   ├── file_table.o<br>│   ├── fs.o<br>│   ├── inode.c<br>│   ├── inode.o<br>│   ├── ioctl.c<br>│   ├── ioctl.o<br>│   ├── Makefile<br>│   ├── namei.c<br>│   ├── namei.o<br>│   ├── open.c<br>│   ├── open.o<br>│   ├── pipe.c<br>│   ├── pipe.o<br>│   ├── read_write.c<br>│   ├── read_write.o<br>│   ├── stat.c<br>│   ├── stat.o<br>│   ├── super.c<br>│   ├── super.o<br>│   ├── truncate.c<br>│   └── truncate.o<br>├── Image<br>├── include<br>│   ├── a.out.h<br>│   ├── asm<br>│   │   ├── io.h<br>│   │   ├── memory.h<br>│   │   ├── segment.h<br>│   │   └── system.h<br>│   ├── const.h<br>│   ├── ctype.h<br>│   ├── errno.h<br>│   ├── fcntl.h<br>│   ├── linux<br>│   │   ├── config.h<br>│   │   ├── fdreg.h<br>│   │   ├── fs.h<br>│   │   ├── hdreg.h<br>│   │   ├── head.h<br>│   │   ├── kernel.h<br>│   │   ├── mm.h<br>│   │   ├── sched.h<br>│   │   ├── sched.h.cur1<br>│   │   ├── sched.h.old<br>│   │   ├── sys.h<br>│   │   └── tty.h<br>│   ├── signal.h<br>│   ├── stdarg.h<br>│   ├── stddef.h<br>│   ├── string.h<br>│   ├── sys<br>│   │   ├── stat.h<br>│   │   ├── times.h<br>│   │   ├── types.h<br>│   │   ├── utsname.h<br>│   │   └── wait.h<br>│   ├── termios.h<br>│   ├── time.h<br>│   ├── unistd.h<br>│   └── utime.h<br>├── init<br>│   ├── main.c<br>│   └── main.o<br>├── kernel<br>│   ├── asm.o<br>│   ├── asm.s<br>│   ├── blk_drv<br>│   │   ├── blk_drv.a<br>│   │   ├── blk.h<br>│   │   ├── floppy.c<br>│   │   ├── floppy.o<br>│   │   ├── hd.c<br>│   │   ├── hd.o<br>│   │   ├── ll_rw_blk.c<br>│   │   ├── ll_rw_blk.o<br>│   │   ├── Makefile<br>│   │   ├── ramdisk.c<br>│   │   └── ramdisk.o<br>│   ├── chr_drv<br>│   │   ├── chr_drv.a<br>│   │   ├── console.c<br>│   │   ├── console.o<br>│   │   ├── keyboard.o<br>│   │   ├── keyboard.s<br>│   │   ├── keyboard.S<br>│   │   ├── Makefile<br>│   │   ├── rs_io.o<br>│   │   ├── rs_io.s<br>│   │   ├── serial.c<br>│   │   ├── serial.o<br>│   │   ├── tty_io.c<br>│   │   ├── tty_ioctl.c<br>│   │   ├── tty_ioctl.o<br>│   │   └── tty_io.o<br>│   ├── exit.c<br>│   ├── exit.o<br>│   ├── fork.c<br>│   ├── fork.o<br>│   ├── kernel.o<br>│   ├── Makefile<br>│   ├── math<br>│   │   ├── Makefile<br>│   │   ├── math.a<br>│   │   ├── math_emulate.c<br>│   │   └── math_emulate.o<br>│   ├── mktime.c<br>│   ├── mktime.o<br>│   ├── panic.c<br>│   ├── panic.o<br>│   ├── printk.c<br>│   ├── printk.o<br>│   ├── sched.c<br>│   ├── sched.o<br>│   ├── signal.c<br>│   ├── signal.o<br>│   ├── sys.c<br>│   ├── sys.o<br>│   ├── system_call.o<br>│   ├── system_call.s<br>│   ├── traps.c<br>│   ├── traps.o<br>│   ├── vsprintf.c<br>│   └── vsprintf.o<br>├── lib<br>│   ├── close.c<br>│   ├── close.o<br>│   ├── ctype.c<br>│   ├── ctype.o<br>│   ├── dup.c<br>│   ├── dup.o<br>│   ├── errno.c<br>│   ├── errno.o<br>│   ├── execve.c<br>│   ├── execve.o<br>│   ├── _exit.c<br>│   ├── _exit.o<br>│   ├── lib.a<br>│   ├── Makefile<br>│   ├── malloc.c<br>│   ├── malloc.o<br>│   ├── open.c<br>│   ├── open.o<br>│   ├── setsid.c<br>│   ├── setsid.o<br>│   ├── string.c<br>│   ├── string.o<br>│   ├── wait.c<br>│   ├── wait.o<br>│   ├── write.c<br>│   └── write.o<br>├── Makefile<br>├── mm<br>│   ├── Makefile<br>│   ├── memory.c<br>│   ├── memory.o<br>│   ├── mm.o<br>│   ├── page.o<br>│   └── page.s<br>├── System.map<br>├── tags<br>└── tools<br>├── build<br>├── build.c<br>└── system</p><h2 id="目录">目录</h2><p>./linux-0.11/<br>├── boot<br>├── fs<br>├── include<br>│   ├── asm<br>│   ├── linux<br>│   └── sys<br>├── init<br>├── kernel<br>│   ├── blk_drv<br>│   ├── chr_drv<br>│   └── math<br>├── lib<br>├── mm<br>└── tools</p><h2 id="boot">boot</h2><p>./linux-0.11/boot/<br>├── bootsect<br>├── bootsect.o<br>├── bootsect.s<br>├── head.o<br>├── head.s<br>├── setup<br>├── setup.o<br>└── setup.s</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux-0.11源码分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> 源码 </tag>
+            
+            <tag> 操作系统 </tag>
+            
+            <tag> linux-0.11 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SNMP-MIB开发</title>
+      <link href="/posts/d4187de3.html"/>
+      <url>/posts/d4187de3.html</url>
+      
+        <content type="html"><![CDATA[<h1>SNMP相关</h1><h2 id="环境准备">环境准备</h2><p>net-snmp包含了所有snmp相关的命令行工具，包括读节点，解析mib文件，代码生成，snmpd代理进程等工具。</p><ul><li>官网下载源码<br><a href="http://www.net-snmp.org/">http://www.net-snmp.org/</a></li><li>解压<br><code>tar xvf net-snmp-5.9.4.tar.gz</code><br><code>cd net-snmp-5.9.4</code></li><li>配置编译环境<br><code>--perfix</code>参数指定安装目录，默认为<code>/usr/local</code><br><code>./configure --prefix=/home/mochen/netsnmp</code><br>执行后会提示选择一些安装参数，按需修改，无特殊需求默认安装即可</li><li>编译安装<br><code>make</code>编译源码<br><code>make install</code>安装（即拷贝相关bin程序和lib库到指定目录）</li></ul><h2 id="mib节点开发">mib节点开发</h2><h3 id="工具">工具</h3><p>所有工具都已经包含在net-snmp安装包中</p><ul><li>snmptranslate<br>用于转换oid和name的对应关系，这里主要用于解析mib文件格式是否正确<br><code> /usr/local/net-snmp/bin/snmptranslate -Tp -IR RFC1213-MIB::interfaces</code><br><code>RFC1213-MIB</code>定义在mib文件开头<br><code>interfaces</code>为需要新增的节点名称<br>可能会有部分报错，只要自己的节点的目录树成功生成就可以生成代码了，如果前面的节点格式错误导致生成失败，可以将前面的节点全部删除，只保留自己的节点。</li><li>mib2c</li></ul><h3 id="标量节点">标量节点</h3><h3 id="表格节点">表格节点</h3><h3 id="trap节点">trap节点</h3><h2 id="mib节点测试">mib节点测试</h2><h3 id="工具-2">工具</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程手册 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> snmp </tag>
+            
+            <tag> mib </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
